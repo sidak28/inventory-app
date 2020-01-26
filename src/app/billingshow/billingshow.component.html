@@ -1,0 +1,75 @@
+<div class="container">
+    <div class="col-xs-12">
+        <h1>Amaajon</h1>    
+
+
+        <form class="example-form">
+            <mat-form-field class="example-full-width">
+
+            <input matInput 
+            placeholder="Enter the name of item 1" 
+            
+            [(ngModel)]="bName"
+            name="bName"
+            >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            
+            </mat-form-field>
+        </form>
+
+        <form class="example-form">
+            <mat-form-field class="example-full-width">
+            <input matInput  
+            
+            placeholder="Enter the price of item 1" 
+            [(ngModel)]="bName2"
+            name="bName2"
+            >
+        </mat-form-field>
+    </form>
+            <br><br>
+
+        <form class="example-form">
+            <mat-form-field class="example-full-width">
+            <input matInput  
+            
+            placeholder="Enter the name of item 2" 
+            [(ngModel)]="bName1"
+            name="bName1"
+            >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        </mat-form-field>
+    </form>
+
+    <form class="example-form">
+        <mat-form-field class="example-full-width">
+            <input matInput  
+            
+            placeholder="Enter the price of item 2" 
+            [(ngModel)]="bName3"
+            name="bname3"
+            >
+        </mat-form-field>
+    </form>
+            <br>
+            <button mat-button
+            class="btn-primary"
+            (click)="checkValid()">Generate Invoice</button><br><br>
+    </div>
+    
+<div *ngFor="let element of serverElements " class="row">
+<div class="col-xs-12">
+<div class="panel panel-default">
+    
+    <div class="panel-heading">Name of item 1 is {{ element.name }}</div>
+        <div class="panel-heading">Name of item 2 is {{ element.name1 }}</div>
+             <div class="panel-body">
+                 <div class="panel-body"> <em >Price of item 1 is {{ element.price1 }}</em></div>
+                    <div class="panel-body"> <em >Price of item 2 is {{ element.price2 }}</em></div>
+                 <div class="panel-body">The total bill is {{element.totalb}} </div>
+                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
